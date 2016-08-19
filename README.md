@@ -1,9 +1,9 @@
-# Pikmedia
+# Wo.Taxi
 
 ## Демо
-Смотреть: [frontende.info/pikmedia](http://frontende.info/pikmedia)
+Смотреть: [frontende.info/taxi](http://frontende.info/taxi)
 
-Скачать: [pikmedia-master.zip](https://github.com/Mischuk/pikmedia/archive/master.zip)
+Скачать: [wo.taxi-master.zip](https://github.com/Mischuk/wo.taxi/archive/master.zip)
 
 ## Описание
 * Сборщик [Gulp](http://gulpjs.com/)
@@ -20,7 +20,7 @@
 
 * Установить [node.js](https://nodejs.org)
 * Зайти в папку с установленной nodejs и обновить npm до последней версии: `npm install npm@latest`
-* Склонировать или [скачать](https://github.com/Mischuk/pikmedia/archive/master.zip) проект
+* Склонировать или скачать проект
 * Установить gulp глобально (один раз!): `npm i -g gulp`
 * Установить зависимости (1 раз на проект): `npm i`
 * Запустить gulp: `gulp dev`
