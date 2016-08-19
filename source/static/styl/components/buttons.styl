@@ -1,0 +1,111 @@
+// Mobile burger button
+.mobile-menu-trigger
+  display block
+  position absolute
+  right 15px
+  top 50%
+  width 40px
+  height 40px
+  margin-top -(@height/2)
+  border 2px solid #fff
+  border-radius 50%
+  cursor pointer
+  @media screen and (min-width: 850px)
+    display none
+  &:after,
+  &:before,
+  span
+    anim()
+    content ''
+    position absolute
+    left 50%
+    width 20px
+    margin-left -10px
+    height 2px
+    background #fff
+  &:before
+    top 10px
+  &:after
+    bottom 10px
+  span
+    top 50%
+    margin-top -1.5px
+  &.open
+    span
+      opacity 0
+      transform translateX(-5px)
+    &:after
+      transform: rotate(135deg) translate(-6px, 6px)
+    &:before
+      transform: rotate(-135deg) translate(-4px, -4px)
+
+.btn-orange
+  anim()
+  bold()
+  font-size 24px
+  height 60px
+  line-height @height
+  border-radius 50px
+  display block
+  background $orange
+  color #fff
+  &:hover
+    background $orange-hover
+.slick-arrow
+  width 26px
+  height 19px
+  position absolute
+  top 50%
+  margin-top -3px
+  text-indent -9999px
+  border none
+  z-index 20
+  &.slick-prev
+    background: url('../images/sprite.png') no-repeat -144px -5px;
+    left -30px
+  &.slick-next
+    background: url('../images/sprite.png') no-repeat -187px -5px;
+    right -30px
+  @media screen and (max-width: 1300px)
+    display none !important
+.slick-dots
+  width 100%
+  position absolute
+  left 0
+  bottom -30px
+  text-align center
+  @media screen and (min-width: 768px)
+    bottom -40px
+  li
+    display inline-block
+    vertical-align middle
+    width 20px
+    height 20px
+    margin-left 5px
+    margin-right 5px
+    &.slick-active
+      button
+        box-shadow inset 0 0 0 3px #fff
+        background $blue
+    button
+      anim()
+      display block
+      width 100%
+      height 100%
+      border 3px solid $blue
+      border-radius 50%
+      background #fff
+      text-indent -9999px
+
+
+.mfp-close
+  background: url('../images/sprite.png') no-repeat 0 0 !important
+  width: 40px;
+  height: 40px;
+  text-indent -9999px
+  font-size 0
+  opacity .8 !important
+  right 20px
+  top 20px !important
+  &:hover
+    opacity .9 !important

@@ -1,0 +1,40 @@
+.m_start
+  padding-bottom 60px
+  padding-top 30px
+  .column
+    position relative
+    text-align center
+    padding-left 25px
+    padding-right 25px
+    margin-bottom 50px
+    @media screen and (min-width: 768px)
+      float left
+      width 33.333%
+      margin-bottom 0
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -187px -5px;
+        width: 26px;
+        height: 19px;
+        position absolute
+        top 44px
+        right -13px
+      &:last-child:after
+        display none
+    .title
+      bold()
+      margin-top 20px
+      margin-bottom 10px
+      font-size 24px
+    .paragraph
+      regular()
+    .icon
+      extrabold()
+      width 100px
+      height 100px
+      line-height 100px
+      background $blue
+      color #fff
+      margin 0 auto
+      font-size 50px
+      border-radius 50%

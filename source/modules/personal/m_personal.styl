@@ -1,0 +1,31 @@
+.m_personal
+  text-align center
+  padding-bottom 30px
+  @media screen and (min-width: 480px)
+    padding-bottom 60px
+    padding-top 30px
+  .image
+    margin 45px 0
+    img
+      display inline-block
+      vertical-align middle
+  .action
+    position relative
+    display block
+    max-width 380px
+    margin 0 auto
+    @media screen and (min-width: 640px)
+      &:after,
+      &:before
+        content ''
+        width: 74px;
+        height: 60px;
+        position absolute
+        top 50%
+        margin-top -40px
+      &:after
+        right -100px
+        background: url('../images/sprite.png') no-repeat -101px -55px;
+      &:before
+        left -100px
+        background: url('../images/sprite.png') no-repeat -3px -52px;

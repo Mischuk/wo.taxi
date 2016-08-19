@@ -1,0 +1,137 @@
+.m_header
+  anim()
+  position fixed
+  z-index 100
+  left 0
+  top 0
+  width 100%
+  height 80px
+  background $blue
+  &.fixed
+    box-shadow 0 0 5px rgba(0,0,0,.5)
+    height 60px
+    .logo
+      margin 3px 0
+    .signin
+      @media screen and (max-width: 479px)
+        transform translateY(-350%)
+        opacity 1
+    .callback
+      margin-top 0
+  @media screen and (min-width: 680px)
+    height 100px
+    &.fixed
+      height 70px
+      .logo
+        margin 6px 0
+      .signin
+        transform translateY(-350%)
+        opacity 0
+      .callback
+        margin-top 0
+  .logo
+    anim()
+    float left
+    width 100px
+    height 52px
+    margin 14px 0
+    a
+      display block
+      width 100%
+      height 100%
+      background url("../images/logo.png") no-repeat 0 0
+      background-size contain
+  .contacts
+    display table
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    padding-left 130px
+    padding-right 140px
+    text-align center
+    @media screen and (min-width: 680px)
+      padding-right 230px
+    .tel
+      bold()
+      font-size 20px
+      display none
+      margin-bottom 5px
+      @media screen and (min-width: 480px)
+        display block
+      @media screen and (min-width: 680px)
+        text-align right
+        padding-right 30px
+      a
+        position relative
+        color #000
+        cursor default
+        padding-left 30px
+        &:after
+          content ''
+          size(24px)
+          position absolute
+          left 0
+          top 50%
+          margin-top -12px
+          background url("../images/tel.png") no-repeat 0 0
+          background-size contain
+    .signin
+      anim()
+      position absolute
+      right 15px
+      top 3px
+      font-size 15px
+      z-index 10
+      @media screen and (min-width: 480px)
+        position static
+      @media screen and (min-width: 680px)
+        position absolute
+        top auto
+        right 15px
+        bottom 15px
+      a
+        color #fff
+        position relative
+        padding-left 20px
+        &:after
+          content ''
+          size(16px)
+          position absolute
+          left 0
+          top 50%
+          margin-top -6px
+          background url("../images/singin.png") no-repeat 0 0
+          background-size contain
+        span
+          anim()
+          border-bottom 1px dashed #fff
+        &:hover
+          span
+            border-color $blue
+  .callback
+    anim()
+    display table
+    position relative
+    float right
+    width 120px
+    height 100%
+    margin-top 12px
+    @media screen and (min-width: 480px)
+      margin-top 0
+    @media screen and (min-width: 680px)
+      width 200px
+    @media screen and (min-width: 680px)
+      margin-top -10px
+    a
+      anim()
+      display block
+      background $orange
+      color #fff
+      font-size 14px
+      padding 5px 10px
+      @media screen and (min-width: 680px)
+        padding 10px
+      &:hover
+        background $orange-hover

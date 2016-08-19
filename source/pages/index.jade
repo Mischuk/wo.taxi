@@ -1,0 +1,274 @@
+doctype html
+html(lang="ru").js
+  head
+    title Wo.Taxi
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="msapplication-tap-highlight" content="no")
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    link(rel="stylesheet" href="styles/plugins.css")
+    link(rel="stylesheet" href="styles/app.css")
+    script(src='js/modernizr.js')
+  body
+    header.m_header
+      .wrapper
+        .logo: a(href="#")
+        .contacts
+          .centered
+            .tel: a(href="#") 8 (800) 333-66-12
+            .signin: a(href="#"): span Войти в личный кабинет
+        .callback
+          .centered
+            a(href="#popup-callback").btn-small-orange.popup-form Перезвоните мне
+    section.m_lead
+      .wrapper
+        .vertical-outer
+          .vertical-inner
+            h1 Хотите зарабатывать в такси больше?
+            p Подключитесь к WO.Taxi и увеличьте свой доход
+            p Наша комиссия — 0% *
+            .image: img.fluid-image(src="images/lead-image.png", alt="")
+            .action
+              a(href="#popup-form").btn-orange.popup-form Подключиться
+              .paragraph.small * — WO.Taxi не берет комиссию с каждого заказа. Только стандартные комиссии сервисов такси.
+    section.m_pluses
+      .wrapper
+        .section-heading Преимущества <span>WO.Taxi</span>
+        .row
+          .column
+            .icon: img(src="images/pluses/1.png", alt="")
+            .paragraph.small Заправка по топливным картам<br> с Вашего баланса
+          .column
+            .icon: img(src="images/pluses/2.png", alt="")
+            .paragraph.small Общий баланс<br> для всех сервисов такси
+          .column
+            .icon: img(src="images/pluses/3.png", alt="")
+            .paragraph.small Вывод денег в любой момент
+          .column
+            .icon: img(src="images/pluses/4.png", alt="")
+            .paragraph.small Топливные карты Лукойл<br> или Газпромнефть на выбор
+          .column
+            .icon: img(src="images/pluses/5.png", alt="")
+            .paragraph.small Отсутствуют дополнительные<br>комисии и скрытые платежи
+          .column
+            .icon: img(src="images/pluses/6.png", alt="")
+            .paragraph.small Пополнение баланса<br> через Сбербанк-Онлайн<br> и терминалы без комиссии
+    section.m_calc
+      .wrapper
+        .section-heading Узнайте вашу выгоду
+        .paragraph.light.center.large Посчитайте, сколько вы заработаете с нами
+        .row
+          .calculate-form
+            form
+              .row
+                label
+                  | Укажите кол-во рабочих дней
+                  input(class="number-only" id="val-days" type="text" placeholder="" maxlength="2" value="24")
+              .row
+                label
+                  | Расходы на топливо в день (руб)
+                  input(class="number-only cash" id="val-refill" type="text" placeholder="" value="700")
+              .row
+                label
+                  | Ваша выручка в день (руб)
+                  input(class="number-only cash" id="val-profit" type="text" placeholder="" value="3500")
+              .row
+                label
+                  | Комиссия сервиса такси (в процетнах)
+                  input(class="number-only percentage" id="val-commission-1" type="text" placeholder="" maxlength="3" value="10" min="0" max="100")
+              .row
+                label
+                  | Комиссия партнера (в процентах)
+                  input(class="number-only percentage" id="val-commission-2" type="text" placeholder="" maxlength="3" value="5" min="0" max="100")
+              .row
+                .paragraph.small <b>Важно!</b> Мы не берем с Вас комиссию, в отличие от других партнеров
+          .calc-result
+            .circle
+              .icon: img(src="images/calc-icon.png", alt="")
+              .title Ваша выгода
+              .paragraph составит
+              .value-profit
+            .bottom
+              .row
+                .column
+                  .title Работая с нами:
+                  .value-1
+                .column
+                  .title Работая с другими:
+                  .value-2(data-rival="5")
+    section.m_personal
+      .wrapper
+        .section-heading Личный кабинет
+        .paragraph.large.light Здесь можно видеть общий баланс по всем подключенным сервисам такси.<br>В любой удобный момент выводить деньги на банковскую карту.<br>Перебросить деньги от одного сервиса такси к другому.
+        .image: img.fluid-image(src="images/macbook.png", alt="")
+        .action
+          a(href="#popup-form").btn-orange.popup-form Хочу подключиться
+    section.m_hook
+      .wrapper
+        .section-heading: span Пришло время зарабатывать
+        //- .paragraph.center.large Посчитайте, сколько вы заработаете с нами
+        form.form-modal
+          .row
+            .column
+              input.required.text(type="text" placeholder="Ваше имя")
+            .column
+              input.required.text.mask-tel(type="tel" placeholder="Телефон")
+            .column
+              input.text(type="email" placeholder="Почта")
+            .column
+              button(type="submit").btn-orange Подключиться
+    section.m_services
+      .wrapper
+        .section-heading Доступные сервисы такси для подключения
+        .paragraph.center.large Подключаясь через нас вы получаете самые выгодные условия работы
+        .serv-carousel
+          .slide: .image: img(src="images/services/1.png", alt="")
+          .slide: .image: img(src="images/services/2.png", alt="")
+          .slide: .image: img(src="images/services/3.png", alt="")
+          .slide: .image: img(src="images/services/4.png", alt="")
+          .slide: .image: img(src="images/services/5.png", alt="")
+          .slide: .image: img(src="images/services/6.png", alt="")
+          .slide: .image: img(src="images/services/7.png", alt="")
+          .slide: .image: img(src="images/services/8.png", alt="")
+          .slide: .image: img(src="images/services/1.png", alt="")
+          .slide: .image: img(src="images/services/2.png", alt="")
+          .slide: .image: img(src="images/services/3.png", alt="")
+          .slide: .image: img(src="images/services/4.png", alt="")
+          .slide: .image: img(src="images/services/5.png", alt="")
+          .slide: .image: img(src="images/services/6.png", alt="")
+          .slide: .image: img(src="images/services/7.png", alt="")
+          .slide: .image: img(src="images/services/8.png", alt="")
+    section.m_stories
+      .wrapper
+        .section-heading Истории таксистов
+        .paragraph.center.large Истории таксистов работающие с сервисами такси через WO.taxi их словами
+        .stories-carousel
+          .slide
+            .slide-wrap
+              .image(style="background-image: url('images/history/1.png')")
+              .paragraph.small.center «Почему я работаю за рулем? 50 на 50: это деньги и развлечение, частью которого является общение с людьми».
+              .user-info David, Санкт-Петербург
+          .slide
+            .slide-wrap
+              .image(style="background-image: url('images/history/2.png')")
+              .paragraph.small.center «Почему я работаю за рулем? 50 на 50: это деньги и развлечение, частью которого является общение с людьми».
+              .user-info David, Санкт-Петербург
+          .slide
+            .slide-wrap
+              .image(style="background-image: url('images/history/3.png')")
+              .paragraph.small.center «Почему я работаю за рулем? 50 на 50: это деньги и развлечение, частью которого является общение с людьми».
+              .user-info David, Санкт-Петербург
+          .slide
+            .slide-wrap
+              .image(style="background-image: url('images/history/2.png')")
+              .paragraph.small.center «Почему я работаю за рулем? 50 на 50: это деньги и развлечение, частью которого является общение с людьми».
+              .user-info David, Санкт-Петербург
+    section.m_start
+      .wrapper
+        .section-heading Начать очень просто
+        .row
+          .column
+            .icon 1
+            .title Отправьте заявку на подключение
+            .paragraph.small.light Процесс занимает считаные минуты
+          .column
+            .icon 2
+            .title Подпишите договор
+            .paragraph.small.light Подпишите несколько документов у нас в офисе и получите топливную карту
+          .column
+            .icon 3
+            .title Начните работать!
+            .paragraph.small.light Без дополнительных комиссий
+
+    section.m_hook
+      .wrapper
+        .section-heading: span Чтобы начать работать заполните форму
+        form.form-modal
+          .row
+            .column
+              input.required.text(type="text" placeholder="Ваше имя")
+            .column
+              input.required.text.mask-tel(type="tel" placeholder="Телефон")
+            .column
+              input.text(type="email" placeholder="Почта")
+            .column
+              button(type="submit").btn-orange Подключиться
+    footer.m_footer
+      .wrapper
+        .contacts
+          .title Контактная информация
+          .locate
+            p Адрес: Санкт-Петербург, ул. Аккуратова, д. 13
+            p: a(href="#popup-maps").popup-form Показать на карте
+          .tel Телефон: <b>8 (800) 333-66-12</b>
+          .email Email: <a href="#">info@wo.taxi</a>
+        .developed Разработка сайта <a href="http://pikmedia.ru/">«Пикмедиа»</a>
+    .popups
+      a(href="#popup-thanks").popup-form.thanks
+      #popup-thanks.popup.zoom-anim-dialog.mfp-hide
+        section.m_hook
+          .section-heading: span Запрос успешно отправлен
+          .paragraph.large.center Наш менеджер с вами свяжется в ближайшее время!
+          .paragraph.large.center Следите за нами в социальных сетях!
+          .socials
+            a.vk(href="#")
+            a.fb(href="#")
+            a.ok(href="#")
+
+      #popup-form.popup.zoom-anim-dialog.mfp-hide
+        section.m_hook
+          .section-heading: span Чтобы начать работать, заполните форму
+          form.form-modal
+            .row
+              .column
+                input.text.required(type="text" placeholder="Ваше имя")
+              .column
+                input.text.required.mask-tel(type="tel" placeholder="Телефон")
+              .column
+                input.text(type="email" placeholder="Почта")
+              .column
+                button(type="submit").btn-orange Отправить заявку
+      #popup-callback.popup.zoom-anim-dialog.mfp-hide
+        section.m_hook
+          .section-heading: span Заказать звонок
+          form.form-modal
+            .row
+              .column
+                input.text.required(type="text" placeholder="Ваше имя")
+              .column
+                input.text.required.mask-tel(type="tel" placeholder="Телефон")
+              .column
+                button(type="submit").btn-orange Отправить заявку
+      #popup-maps.popup.zoom-anim-dialog.mfp-hide
+        script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        .map-container
+          .info
+            .header
+              select#editable-select
+                option(value="1" selected="selected") Санкт-Петербург
+                option(value="2") Москва
+                option(value="3") Екатеринбург
+            .body
+              .heading Контактная информация
+              .place.current
+                .locate Адрес: Санкт-Петербург, ул. Аккуратова, д. 13
+                .tel Телефон: <b>8 (800) 333-66-12</b>
+                .email Email: <a href="#">info@wo.taxi</a>
+              .place
+                .locate Адрес: Москва, ул. Аккуратова, д. 13
+                .tel Телефон: <b>8 (800) 333-66-12</b>
+                .email Email: <a href="#">info@wo.taxi</a>
+              .place
+                .locate Адрес: Екатеринбург, ул. Аккуратова, д. 13
+                .tel Телефон: <b>8 (800) 333-66-12</b>
+                .email Email: <a href="#">info@wo.taxi</a>
+          #map
+
+
+
+    // JS
+    script(src='js/jquery.min.js')
+    script(src='js/plugins.js')
+    script(src='js/app.js')

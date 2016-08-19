@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html class="js" lang="ru">
+
+	<head>
+		<title>Wo.Taxi</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="msapplication-tap-highlight" content="no">
+		<link type="image/x-icon" href="favicon.ico" rel="icon">
+		<link type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,600,700&amp;subset=latin,cyrillic" rel="stylesheet">
+		<link href="styles/plugins.css" rel="stylesheet">
+		<link href="styles/app.css" rel="stylesheet">
+		<script src="js/modernizr.js"></script>
+	</head>
+
+	<body>
+		<header class="m_header">
+			<div class="wrapper">
+				<div class="logo">
+					<a href="#"></a>
+				</div>
+				<div class="contacts">
+					<div class="centered">
+						<div class="tel">
+							<a href="#">8 (800) 333-66-12</a>
+						</div>
+						<div class="signin">
+							<a href="#">
+								<span>Войти в личный кабинет</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="callback">
+					<div class="centered">
+						<a class="btn-small-orange popup-form" href="#popup-callback">Перезвоните мне</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="m_lead">
+			<div class="wrapper">
+				<div class="vertical-outer">
+					<div class="vertical-inner">
+						<h1>Хотите зарабатывать в такси больше?</h1>
+						<p>Подключитесь к WO.Taxi и увеличьте свой доход</p>
+						<p>Наша комиссия — 0% *</p>
+						<div class="image">
+							<img class="fluid-image" src="images/lead-image.png" alt>
+						</div>
+						<div class="action">
+							<a class="btn-orange popup-form" href="#popup-form">Подключиться</a>
+							<div class="paragraph small">* — WO.Taxi не берет комиссию с каждого заказа. Только стандартные комиссии сервисов такси.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="m_pluses">
+			<div class="wrapper">
+				<div class="section-heading">Преимущества
+					<span>WO.Taxi</span>
+				</div>
+				<div class="row">
+					<div class="column">
+						<div class="icon">
+							<img src="images/pluses/1.png" alt>
+						</div>
+						<div class="paragraph small">Заправка по топливным картам
+							<br> с Вашего баланса</div>
+					</div>
+					<div class="column">
+						<div class="icon">
+							<img src="images/pluses/2.png" alt>
+						</div>
+						<div class="paragraph small">Общий баланс
+							<br> для всех сервисов такси</div>
+					</div>
+					<div class="column">
+						<div class="icon">
+							<img src="images/pluses/3.png" alt>
+						</div>
+						<div class="paragraph small">Вывод денег в любой момент</div>
+					</div>
+					<div class="column">
+						<div class="icon">
+							<img src="images/pluses/4.png" alt>
+						</div>
+						<div class="paragraph small">Топливные карты Лукойл
+							<br> или Газпромнефть на выбор</div>
+					</div>
+					<div class="column">
+						<div class="icon">
+							<img src="images/pluses/5.png" alt>
+						</div>
+						<div class="paragraph small">Отсутствуют дополнительные
+							<br>комисии и скрытые платежи</div>
+					</div>
+					<div class="column">
+						<div class="icon">
+							<img src="images/pluses/6.png" alt>
+						</div>
+						<div class="paragraph small">Пополнение баланса
+							<br> через Сбербанк-Онлайн
+							<br> и терминалы без комиссии</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="m_calc">
+			<div class="wrapper">
+				<div class="section-heading">Узнайте вашу выгоду</div>
+				<div class="paragraph light center large">Посчитайте, сколько вы заработаете с нами</div>
+				<div class="row">
+					<div class="calculate-form">
+						<form>
+							<div class="row">
+								<label>Укажите кол-во рабочих дней
+									<input class="number-only" id="val-days" maxlength="2" type="text" placeholder value="24">
+								</label>
+							</div>
+							<div class="row">
+								<label>Расходы на топливо в день (руб)
+									<input class="number-only cash" id="val-refill" type="text" placeholder value="700">
+								</label>
+							</div>
+							<div class="row">
+								<label>Ваша выручка в день (руб)
+									<input class="number-only cash" id="val-profit" type="text" placeholder value="3500">
+								</label>
+							</div>
+							<div class="row">
+								<label>Комиссия сервиса такси (в процетнах)
+									<input class="number-only percentage" id="val-commission-1" maxlength="3" type="text" placeholder value="10" min="0" max="100">
+								</label>
+							</div>
+							<div class="row">
+								<label>Комиссия партнера (в процентах)
+									<input class="number-only percentage" id="val-commission-2" maxlength="3" type="text" placeholder value="5" min="0" max="100">
+								</label>
+							</div>
+							<div class="row">
+								<div class="paragraph small">
+									<b>Важно!</b> Мы не берем с Вас комиссию, в отличие от других партнеров</div>
+							</div>
+						</form>
+					</div>
+					<div class="calc-result">
+						<div class="circle">
+							<div class="icon">
+								<img src="images/calc-icon.png" alt>
+							</div>
+							<div class="title">Ваша выгода</div>
+							<div class="paragraph">составит</div>
+							<div class="value-profit"></div>
+						</div>
+						<div class="bottom">
+							<div class="row">
+								<div class="column">
+									<div class="title">Работая с нами:</div>
+									<div class="value-1"></div>
+								</div>
+								<div class="column">
+									<div class="title">Работая с другими:</div>
+									<div class="value-2" data-rival="5"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="m_personal">
+			<div class="wrapper">
+				<div class="section-heading">Личный кабинет</div>
+				<div class="paragraph large light">Здесь можно видеть общий баланс по всем подключенным сервисам такси.
+					<br>В любой удобный момент выводить деньги на банковскую карту.
+					<br>Перебросить деньги от одного сервиса такси к другому.</div>
+				<div class="image">
+					<img class="fluid-image" src="images/macbook.png" alt>
+				</div>
+				<div class="action">
+					<a class="btn-orange popup-form" href="#popup-form">Хочу подключиться</a>
+				</div>
+			</div>
+		</section>
+		<section class="m_hook">
+			<div class="wrapper">
+				<div class="section-heading">
+					<span>Пришло время зарабатывать</span>
+				</div>
+				<form class="form-modal">
+					<div class="row">
+						<div class="column">
+							<input class="required text" type="text" placeholder="Ваше имя">
+						</div>
+						<div class="column">
+							<input class="required text mask-tel" type="tel" placeholder="Телефон">
+						</div>
+						<div class="column">
+							<input class="text" type="email" placeholder="Почта">
+						</div>
+						<div class="column">
+							<button class="btn-orange" type="submit">Подключиться</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="m_services">
+			<div class="wrapper">
+				<div class="section-heading">Доступные сервисы такси для подключения</div>
+				<div class="paragraph center large">Подключаясь через нас вы получаете самые выгодные условия работы</div>
+				<div class="serv-carousel">
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/1.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/2.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/3.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/4.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/5.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/6.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/7.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/8.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/1.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/2.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/3.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/4.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/5.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/6.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/7.png" alt>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="image">
+							<img src="images/services/8.png" alt>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="m_stories">
+			<div class="wrapper">
+				<div class="section-heading">Истории таксистов</div>
+				<div class="paragraph center large">Истории таксистов работающие с сервисами такси через WO.taxi их словами</div>
+				<div class="stories-carousel">
+					<div class="slide">
+						<div class="slide-wrap">
+							<div class="image" style="background-image: url('images/history/1.png')"></div>
+							<div class="paragraph small center">«Почему я работаю за рулем? 50 на 50: это деньги и развлечение, частью которого является общение с людьми».</div>
+							<div class="user-info">David, Санкт-Петербург</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide-wrap">
+							<div class="image" style="background-image: url('images/history/2.png')"></div>
+							<div class="paragraph small center">«Почему я работаю за рулем? 50 на 50: это деньги и развлечение, частью которого является общение с людьми».</div>
+							<div class="user-info">David, Санкт-Петербург</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide-wrap">
+							<div class="image" style="background-image: url('images/history/3.png')"></div>
+							<div class="paragraph small center">«Почему я работаю за рулем? 50 на 50: это деньги и развлечение, частью которого является общение с людьми».</div>
+							<div class="user-info">David, Санкт-Петербург</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide-wrap">
+							<div class="image" style="background-image: url('images/history/2.png')"></div>
+							<div class="paragraph small center">«Почему я работаю за рулем? 50 на 50: это деньги и развлечение, частью которого является общение с людьми».</div>
+							<div class="user-info">David, Санкт-Петербург</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="m_start">
+			<div class="wrapper">
+				<div class="section-heading">Начать очень просто</div>
+				<div class="row">
+					<div class="column">
+						<div class="icon">1</div>
+						<div class="title">Отправьте заявку на подключение</div>
+						<div class="paragraph small light">Процесс занимает считаные минуты</div>
+					</div>
+					<div class="column">
+						<div class="icon">2</div>
+						<div class="title">Подпишите договор</div>
+						<div class="paragraph small light">Подпишите несколько документов у нас в офисе и получите топливную карту</div>
+					</div>
+					<div class="column">
+						<div class="icon">3</div>
+						<div class="title">Начните работать!</div>
+						<div class="paragraph small light">Без дополнительных комиссий</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="m_hook">
+			<div class="wrapper">
+				<div class="section-heading">
+					<span>Чтобы начать работать заполните форму</span>
+				</div>
+				<form class="form-modal">
+					<div class="row">
+						<div class="column">
+							<input class="required text" type="text" placeholder="Ваше имя">
+						</div>
+						<div class="column">
+							<input class="required text mask-tel" type="tel" placeholder="Телефон">
+						</div>
+						<div class="column">
+							<input class="text" type="email" placeholder="Почта">
+						</div>
+						<div class="column">
+							<button class="btn-orange" type="submit">Подключиться</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<footer class="m_footer">
+			<div class="wrapper">
+				<div class="contacts">
+					<div class="title">Контактная информация</div>
+					<div class="locate">
+						<p>Адрес: Санкт-Петербург, ул. Аккуратова, д. 13</p>
+						<p>
+							<a class="popup-form" href="#popup-maps">Показать на карте</a>
+						</p>
+					</div>
+					<div class="tel">Телефон:
+						<b>8 (800) 333-66-12</b>
+					</div>
+					<div class="email">Email:
+						<a href="#">info@wo.taxi</a>
+					</div>
+				</div>
+				<div class="developed">Разработка сайта
+					<a href="http://pikmedia.ru/">«Пикмедиа»</a>
+				</div>
+			</div>
+		</footer>
+		<div class="popups">
+			<a class="popup-form thanks" href="#popup-thanks"></a>
+			<div class="popup zoom-anim-dialog mfp-hide" id="popup-thanks">
+				<section class="m_hook">
+					<div class="section-heading">
+						<span>Запрос успешно отправлен</span>
+					</div>
+					<div class="paragraph large center">Наш менеджер с вами свяжется в ближайшее время!</div>
+					<div class="paragraph large center">Следите за нами в социальных сетях!</div>
+					<div class="socials">
+						<a class="vk" href="#"></a>
+						<a class="fb" href="#"></a>
+						<a class="ok" href="#"></a>
+					</div>
+				</section>
+			</div>
+			<div class="popup zoom-anim-dialog mfp-hide" id="popup-form">
+				<section class="m_hook">
+					<div class="section-heading">
+						<span>Чтобы начать работать, заполните форму</span>
+					</div>
+					<form class="form-modal">
+						<div class="row">
+							<div class="column">
+								<input class="text required" type="text" placeholder="Ваше имя">
+							</div>
+							<div class="column">
+								<input class="text required mask-tel" type="tel" placeholder="Телефон">
+							</div>
+							<div class="column">
+								<input class="text" type="email" placeholder="Почта">
+							</div>
+							<div class="column">
+								<button class="btn-orange" type="submit">Отправить заявку</button>
+							</div>
+						</div>
+					</form>
+				</section>
+			</div>
+			<div class="popup zoom-anim-dialog mfp-hide" id="popup-callback">
+				<section class="m_hook">
+					<div class="section-heading">
+						<span>Заказать звонок</span>
+					</div>
+					<form class="form-modal">
+						<div class="row">
+							<div class="column">
+								<input class="text required" type="text" placeholder="Ваше имя">
+							</div>
+							<div class="column">
+								<input class="text required mask-tel" type="tel" placeholder="Телефон">
+							</div>
+							<div class="column">
+								<button class="btn-orange" type="submit">Отправить заявку</button>
+							</div>
+						</div>
+					</form>
+				</section>
+			</div>
+			<div class="popup zoom-anim-dialog mfp-hide" id="popup-maps">
+				<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+				<div class="map-container">
+					<div class="info">
+						<div class="header">
+							<select id="editable-select">
+								<option value="1" selected="selected">Санкт-Петербург</option>
+								<option value="2">Москва</option>
+								<option value="3">Екатеринбург</option>
+							</select>
+						</div>
+						<div class="body">
+							<div class="heading">Контактная информация</div>
+							<div class="place current">
+								<div class="locate">Адрес: Санкт-Петербург, ул. Аккуратова, д. 13</div>
+								<div class="tel">Телефон:
+									<b>8 (800) 333-66-12</b>
+								</div>
+								<div class="email">Email:
+									<a href="#">info@wo.taxi</a>
+								</div>
+							</div>
+							<div class="place">
+								<div class="locate">Адрес: Москва, ул. Аккуратова, д. 13</div>
+								<div class="tel">Телефон:
+									<b>8 (800) 333-66-12</b>
+								</div>
+								<div class="email">Email:
+									<a href="#">info@wo.taxi</a>
+								</div>
+							</div>
+							<div class="place">
+								<div class="locate">Адрес: Екатеринбург, ул. Аккуратова, д. 13</div>
+								<div class="tel">Телефон:
+									<b>8 (800) 333-66-12</b>
+								</div>
+								<div class="email">Email:
+									<a href="#">info@wo.taxi</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="map"></div>
+				</div>
+			</div>
+		</div>
+		<!-- JS-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+
+</html>

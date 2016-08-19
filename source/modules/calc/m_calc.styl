@@ -1,0 +1,146 @@
+.m_calc
+  background #f2fafc
+  padding-top 10px
+  padding-bottom 30px
+  .wrapper
+    @media screen and (min-width: 1200px)
+      padding-left 80px
+      padding-right 80px
+  .section-heading + .paragraph
+    margin-bottom 30px
+  .calculate-form
+    background #fff
+    width 98%
+    margin 0 auto
+    border-radius 25px
+    box-shadow 4px 0 29px rgba(131, 136, 137, 0.11)
+    @media screen and (min-width: 768px)
+      float left
+      width 300px
+    @media screen and (min-width: 992px)
+      width 430px
+    form
+      padding 20px
+      .row
+        line-height 16px
+        &:last-child
+          .paragraph
+            regular()
+            color $text-light
+            b
+              bold()
+              font-weight normal
+      label
+        regular()
+        font-size 16px
+        color $text-light
+        input
+          anim()
+          regular()
+          display block
+          width 100%
+          font-size 16px
+          line-height 1
+          padding 10px 15px
+          border-radius 5px
+          border 1px solid $border
+          margin-top 7px
+          margin-bottom 15px
+          &:focus
+            border-color $blue
+  .calc-result
+    margin-top 30px
+    @media screen and (min-width: 768px)
+      width 400px
+      float right
+      margin-top 0
+    .circle
+      width 280px
+      height 280px
+      margin 0 auto
+      border 10px solid $blue
+      border-radius 50%
+      text-align center
+      @media screen and (min-width: 480px)
+        width 400px
+        height 400px
+      .icon
+        margin-top 20px
+        @media screen and (min-width: 480px)
+          margin-top 60px
+      .title
+        bold()
+        font-size 24px
+        margin-top 5px
+        margin-bottom 0px
+      .value-profit
+        bold()
+        display inline-block
+        vertical-align middle
+        width auto
+        position relative
+        margin-top -5px
+        color $blue-dark
+        font-size 48px
+        line-height 48px
+        padding-right 45px
+        @media screen and (min-width: 480px)
+          font-size 60px
+          margin-top 10px
+        &:after
+          content ''
+          width 36px
+          height 39px
+          background url("../images/ruble.png") no-repeat 0 0
+          position absolute
+          right 0
+          top 50%
+          margin-top -(@height/2)
+    .bottom
+      margin-top 20px
+      .column
+        text-align center
+        margin-bottom 30px
+        @media screen and (min-width: 480px)
+          float left
+          width 50%
+        &:last-child
+          margin-bottom 0
+        .title
+          height 20px
+          margin-bottom 5px
+        .value-1, .value-2
+          extrabold()
+          color $blue-dark
+          display inline-block
+          vertical-align middle
+          position relative
+          padding-right 25px
+          font-size 36px
+          line-height 36px
+          &:after
+            content ''
+            width 20px
+            height 22px
+            background url("../images/ruble.png") no-repeat 0 0
+            background-size contain
+            position absolute
+            right 0
+            top 50%
+            margin-top -8px
+        .value-2
+          color #999
+          font-size 30px
+          &:after
+            opacity .2
+        &:first-child
+          .title
+            light()
+            font-size 18px
+            line-height 18px
+        &:last-child
+          .title
+            light()
+            font-size 16px
+            color #999
+            line-height 18px

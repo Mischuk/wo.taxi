@@ -1,0 +1,195 @@
+.popup
+  overflow hidden
+  text-align: left;
+  max-width: 1170px;
+  margin: 40px auto;
+  position: relative;
+  border-radius 50px
+  .m_hook
+    padding 90px 70px
+    @media screen and (max-width: 992px)
+      padding 60px 20px
+      .btn-orange
+        font-size 17px
+    @media screen and (max-width: 767px)
+      padding-bottom 20px
+    .section-heading
+      overflow hidden
+      padding-top 0
+  .socials
+    text-align center
+    a
+      anim()
+      position relative
+      display inline-block
+      vertical-align middle
+      width 40px
+      height 40px
+      background-color #fff
+      box-shadow 4px 0 21px rgba(0,0,0,.31)
+      margin-left 8px
+      margin-right 8px
+      &:hover
+        box-shadow 4px 0 41px rgba(0,0,0,.11)
+      &:after
+        content ""
+        position absolute
+        left 50%
+        top 50%
+      &.vk:after
+        background: url('../images/sprite.png') no-repeat -77px 0;
+        width: 16px;
+        height: 10px;
+        margin-top -(@height/2)
+        margin-left -(@width/2)
+      &.fb:after
+        background: url('../images/sprite.png') no-repeat -101px 0;
+        width: 8px;
+        height: 16px;
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &.ok:after
+        background: url('../images/sprite.png') no-repeat -117px 0;
+        width: 10px;
+        height: 16px;
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+
+#popup-form
+  .m_hook
+    background url("../images/modals/bg-form.png") 50% no-repeat
+    background-size cover
+#popup-thanks
+  .m_hook
+    background-image url("../images/modals/bg-success.png")
+#popup-callback
+  .m_hook
+    background-image url("../images/modals/bg-callback.png")
+  .row
+    text-align center
+  .column
+    display inline-block
+    float none
+    @media screen and (max-width: 767px)
+      display block
+#popup-maps
+  @media screen and (max-height: 700px)
+    height 600px
+    .map-container
+      height 100%
+  @media screen and (max-height: 600px)
+    height 500px
+  @media screen and (max-height: 570px)
+    height 400px
+  @media screen and (max-height: 470px)
+    height 300px
+  @media screen and (max-height: 370px)
+    height 200px
+  @media screen and (max-height: 270px)
+    height 100px
+
+.ymaps-2-1-42-controls__control
+  display none !important
+.map-container
+  position relative
+  @media screen and (max-width: 860px)
+    padding-bottom 80px
+  @media screen and (max-height: 570px)
+    padding-bottom 0
+  #map
+    width 100%
+    height 600px
+    @media screen and (max-height: 700px)
+      height 100%
+
+  .info
+    position absolute
+    width 430px
+    z-index 100
+    left 50px
+    height 330px
+    top 50%
+    margin-top -(@height/2)
+    background #fff
+    box-shadow 4px 0 31px rgba(0,0,0,.11)
+    @media screen and (max-width: 1024px)
+      left 15px
+      width 380px
+      height 260px
+      margin-top -130px
+    @media screen and (max-width: 860px)
+      top auto
+      left 0
+      bottom 0
+      margin-top 0
+      width 100%
+    @media screen and (max-width: 460px)
+      height auto
+    @media screen and (max-height: 570px)
+      display none
+    .header
+      padding 30px
+      @media screen and (max-width: 1024px)
+        padding 15px
+      .selectric
+        border-color #d4e0e4
+        border-radius 5px
+        background #fff
+        .button
+          &:after
+            background: url('../images/sprite.png') no-repeat -53px 0;
+            width: 16px;
+            height: 9px;
+            border none
+        .label
+          regular()
+          font-size 16px
+          color #000
+      .selectric-open .selectric
+        border-radius 5px 5px 0 0
+      .selectric-items
+        background #fff
+        border-color #d4e0e4
+        border-radius 0 0 5px 5px
+        margin-top -1px
+        li
+          font-size 16px
+          &.selected,
+          &:hover
+            background #d4e0e4
+
+      .selectric-wrapper,
+      .selectric,
+      .selectric-items
+        width 100% !important
+    .body
+      box-shadow inset 0 20px 10px -5px rgba(100,100,100,.1)
+      padding 30px
+      font-size 16px
+      @media screen and (max-width: 1024px)
+        padding 15px
+      b
+        bold()
+        font-weight normal
+      .heading
+        circe()
+        font-size 30px
+        line-height 1
+        margin-bottom 30px
+        margin-top 10px
+        @media screen and (max-width: 1024px)
+          margin-bottom 15px
+      .place
+        display none
+        @media screen and (max-width: 460px)
+          padding-bottom 15px
+        > div
+          margin-bottom 15px
+          a
+            anim()
+            color $link
+            border-bottom 1px solid #fff
+            &:hover
+              border-bottom 1px solid $link
+        &.current
+          display block

@@ -1,0 +1,72 @@
+.m_lead
+  height auto
+  background url("../images/lead-bg.jpg") no-repeat 50%
+  background-size cover
+  padding-top 100px
+  text-align center
+  height 600px
+  @media screen and (min-width: 380px)
+    height 650px
+  @media screen and (min-width: 680px)
+    padding-top 120px
+    height 700px
+  @media screen and (min-width: 768px)
+    height 100%
+  @media screen and (min-width: 768px) and (min-height: 460px)
+    height 750px
+  @media screen and (min-width: 768px) and (min-height: 750px)
+    height 100%
+  .vertical-outer,
+  .vertical-inner
+    @media screen and (max-width: 767px)
+      display block
+  h1
+    circe()
+    font-size 30px
+    line-height 1
+    @media screen and (min-width: 480px)
+      font-size 36px
+    @media screen and (min-width: 768px)
+      font-size 60px
+      margin-bottom 30px
+    @media screen and (min-width: 768px) and (min-height: 320px) and (max-height: 850px)
+      font-size 30px
+      margin-bottom 0
+    @media screen and (min-width: 768px) and (max-height: 868px)
+      font-size 36px
+  p
+    bold()
+    margin 10px 0
+    font-size 18px
+    @media screen and (min-width: 768px)
+      font-size 30px
+    @media screen and (min-width: 768px) and (min-height: 320px) and (max-height: 850px)
+      font-size 18px
+      margin 5px 0
+  .image
+    margin-top 20px
+    text-align center
+    @media screen and (min-width: 768px) and (min-height: 320px)
+      display none
+    @media screen and (min-width: 768px) and (min-height: 460px)
+      display block
+    img
+      display inline-block
+      vertical-align middle
+  .action
+    position absolute
+    left 0
+    bottom 30px
+    width 100%
+    padding 0 15px
+    @media screen and (min-width: 768px)
+      position static
+    a
+      max-width 380px
+      margin 20px auto
+      @media screen and (min-width: 768px) and (min-height: 320px) and (max-height: 459px)
+        height 30px
+        line-height 30px
+        font-size 14px
+        max-width 200px
+

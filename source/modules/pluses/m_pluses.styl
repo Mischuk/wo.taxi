@@ -1,0 +1,25 @@
+.m_pluses
+  background #fff
+  text-align center
+  padding-bottom 20px
+  @media screen and (min-width: 768px)
+    padding-bottom 70px
+  .column
+    padding 0 10px
+    margin-bottom 20px
+    @media screen and (min-width: 480px)
+      float left
+      width 50%
+    &:nth-child(2n+1)
+      @media screen and (min-width: 480px) and (max-width: 767px)
+        clear left
+    @media screen and (min-width: 768px)
+      width 33.333%
+      &:nth-child(3n+1)
+        clear left
+  .icon
+    height 85px
+    line-height @height
+    img
+      display inline-block
+      vertical-align middle

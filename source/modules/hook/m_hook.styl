@@ -1,0 +1,58 @@
+.m_hook
+  padding-bottom 30px
+  background url("../images/hook-bg.jpg") no-repeat 50%
+  background-size cover
+  .wrapper
+    overflow hidden
+  .section-heading
+    span
+      position relative
+      display inline-block
+      vertical-align middle
+      color #fff
+      &:before,
+      &:after
+        content ''
+        height 2px
+        width 68%
+        position absolute
+        top 50%
+        margin-top -1px
+        background $blue
+      &:before
+        right -75%
+      &:after
+        left -75%
+  .paragraph
+    margin-top -10px
+    color #fff
+    margin-bottom 30px
+  .column
+    margin-bottom 20px
+    @media screen and (min-width: 768px)
+      float left
+      width 25%
+      padding-left 1%
+      padding-right 1%
+  input
+    anim()
+    regular()
+    width 100%
+    border-radius 25px
+    padding 15px 30px
+    border none
+    box-shadow 4px 0 29px rgba(0,0,0,.3)
+    font-size 16px
+    &:focus
+      box-shadow 4px 0 29px rgba(0,0,0,.75)
+    &.highlight
+      box-shadow 0 0 29px rgba(255, 2, 2, 0.53)
+  button
+    width 100%
+    border none
+    font-size 20px
+    padding-top 15px
+    padding-bottom 15px
+    height auto
+    line-height 19px
+    border none
